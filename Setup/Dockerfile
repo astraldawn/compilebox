@@ -34,4 +34,4 @@ RUN git clone https://github.com/astraldawn/pylps
 RUN cd pylps && git pull
 RUN pip install -U pip
 RUN cd pylps && pip install -r requirements.txt
-RUN python3.6 setup.py develop
+RUN cd pylps && python3.6 setup.py develop
