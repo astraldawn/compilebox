@@ -76,4 +76,4 @@ app.get('/', function(req, res)
 });
 
 console.log("Listening at "+port)
-server.listen(port);
+server.listen(port, function() { console.log("Server up") });
