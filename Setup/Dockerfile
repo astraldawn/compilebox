@@ -3,8 +3,7 @@
 # Based on Ubuntu
 ############################################################
 
-FROM chug/ubuntu14.04x64
-MAINTAINER ASAD MEMON, OSMAN ALI
+FROM ubuntu:xenial
 
 # Update the repository sources list
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
