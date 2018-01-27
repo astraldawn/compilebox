@@ -32,6 +32,7 @@ RUN apt-get install -y git
 RUN apt-get install -y python-pip
 RUN git clone https://github.com/astraldawn/pylps
 RUN cd pylps && git pull
-RUN pip install -U pip
-RUN cd pylps && pip install -r requirements.txt
+RUN pip3 install -U pip
+RUN pip3 --version
+RUN cd pylps && pip3 install -r requirements.txt
 RUN cd pylps && python3.6 setup.py develop
