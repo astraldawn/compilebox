@@ -19,6 +19,7 @@ RUN apt-get update
 #Install all the languages/compilers we are supporting.
 RUN apt-get install -y python
 RUN apt-get install -y python3.6
+RUN apt-get install -y python3-pip
 
 RUN apt-get install -y mysql-server
 
@@ -30,5 +31,6 @@ RUN echo "mysql ALL = NOPASSWD: /usr/sbin/service mysql start" | cat >> /etc/sud
 RUN apt-get install -y git
 RUN git clone https://github.com/astraldawn/pylps
 RUN cd pylps && git pull
-RUN python3.6 -m pip install -r requirements.txt
+RUN pip install -U pip
+RUN pip install -r requirements.txt
 RUN python3.6 setup.py develop
