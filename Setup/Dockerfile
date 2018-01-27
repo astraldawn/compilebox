@@ -30,5 +30,6 @@ RUN echo "mysql ALL = NOPASSWD: /usr/sbin/service mysql start" | cat >> /etc/sud
 RUN apt-get install -y git
 RUN git clone https://github.com/astraldawn/pylps
 RUN cd pylps && git pull
+RUN pip install -U pip
 RUN pip install -r requirements.txt
 RUN python3.6 setup.py develop
