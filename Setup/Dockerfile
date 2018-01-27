@@ -30,7 +30,7 @@ RUN echo "mysql ALL = NOPASSWD: /usr/sbin/service mysql start" | cat >> /etc/sud
 RUN apt-get install -y git
 
 #Installing pip for 3.6
-RUN apt-get install -y python3.6-dev python3.6-venv
+# RUN apt-get install -y python3.6-dev python3.6-venv
 RUN apt-get install -y wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.6 get-pip.py
