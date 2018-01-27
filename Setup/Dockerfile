@@ -3,14 +3,15 @@
 # Based on Ubuntu
 ############################################################
 
-FROM ubuntu:xenial
+FROM chug/ubuntu14.04x64
+MAINTAINER ASAD MEMON, OSMAN ALI
 
 # Update the repository sources list
-RUN echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get update
 
 # python3.6 ppa
-RUN apt-get install -y python3-software-properties
+RUN apt-get install -y python-software-properties
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository -y ppa:jonathonf/python-3.6
 RUN apt-get update
