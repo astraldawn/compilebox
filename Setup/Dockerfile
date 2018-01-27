@@ -8,9 +8,13 @@ MAINTAINER ASAD MEMON, OSMAN ALI
 
 # Update the repository sources list
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
+RUN apt-get update
+
+# python3.6 ppa
+RUN apt-get install -y python-software-properties
+RUN apt-get install -y software-properties-common
 RUN add-apt-repository -y ppa:jonathonf/python-3.6
 RUN apt-get update
-#RUN apt-get upgrade
 
 #Install all the languages/compilers we are supporting.
 RUN apt-get install -y gcc
