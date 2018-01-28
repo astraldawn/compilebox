@@ -35,7 +35,7 @@ RUN apt-get install -y wget
 RUN wget https://bootstrap.pypa.io/get-pip.py
 RUN python3.6 get-pip.py
 # RUN ln -s /usr/bin/python3.6 /usr/local/bin/python3
-RUN ln -s /usr/local/bin/pip /usr/local/bin/pip3
+# RUN ln -s /usr/local/bin/pip /usr/local/bin/pip3
 
 RUN git clone https://github.com/astraldawn/pylps
 RUN cd pylps && git pull
