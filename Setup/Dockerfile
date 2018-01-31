@@ -38,8 +38,10 @@ RUN python3.6 get-pip.py
 # RUN ln -s /usr/local/bin/pip /usr/local/bin/pip3
 
 RUN git clone https://github.com/astraldawn/pylps
-RUN cd pylps && git pull
 RUN pip3 install -U pip
 RUN pip3 --version
+
+ARG CACHEB=1
+RUN cd pylps && git pull
 RUN cd pylps && pip3 install -r requirements.txt
 RUN cd pylps && python3.6 setup.py develop
